@@ -32,8 +32,8 @@ var cpuPick = cpuOptions[1];
 if ( userPick != cpuPick ) {
   // Todos los casos en los que pierdes
   if ( ( userPick == rock && cpuPick == paper ) ||
-      ( userPick == paper && cpuPick == rock ) ||
-      ( userPick == scissors && cpuPick == paper ) ) {
+      ( userPick == paper && cpuPick == scissors ) ||
+      ( userPick == scissors && cpuPick == rock ) ) {
 
     shuffle(loseMessages);
     message = loseMessages[1];
