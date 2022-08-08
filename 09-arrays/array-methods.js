@@ -8,7 +8,7 @@ var articles = [
   { name: "Headphones", cost: 300 }
 ];
 
-// filter: new array filtered
+// filter: new array filtered with condition
 var filteredArticles = articles.filter( function(article) {
     return article.cost <= 500;
 });
