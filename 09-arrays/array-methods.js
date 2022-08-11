@@ -8,7 +8,7 @@ var articles = [
   { name: "Headphones", cost: 300 }
 ];
 
-// filter: new array filtered -------------------------------------
+// filter: new array filtered --------------------------------------------------------------------------------------
 
 // filter abbreviate 
 var filteredArticles = articles.filter(article => article.cost == 400);
@@ -24,7 +24,7 @@ console.log(filteredArticles); // [{"name":"Bike","cost":400},{"name":"Book","co
 */
 
 
-// map: new array result of function -------------------------------
+// map: new array result of function ------------------------------------------------------------------------------
 
 // map abbreviate
 var mapCostArticles = articles.map( article => article.cost / 10);
@@ -38,5 +38,26 @@ var mapCostArticles = articles.map( function(article) {
 
 console.log(filteredArticles); // [40, 100, 7, 160, 400, 7, 30]
 */
+
+// find: Return first element validated success -------------------------------------------------------------------
+
+var findLaptopArticle = articles.find(function (article) {
+  return article.name === "Laptop";
+});
+console.log(findLaptopArticle);// [{ "name": "Bike", "cost": 400 }]
+
+// forEach: Execute function for any element ---------------------------------------------------------------------
+
+articles.forEach(function (article) {
+  console.log(article.name);
+});
+
+// some: Return boolean if anyone in list validate -------------------------------------------------------------------
+
+var articlesSome = articles.some(function (article) {
+  return article.cost <= 700;
+});
+console.log(articleSome); // true
+
 
 // *Cost value in currency PEN (Soles)*
